@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call Intelligence Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 5h16M4 12h10M4 19h7"/><circle cx="18" cy="17" r="3"/><path d="m21 20-1.5-1.5"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Call Intelligence Agent</h1>
+        <p class="tagline">Grounded, human-in-the-loop meeting &amp; call intelligence</p>
+      </div>
+    </div>
+    <div class="chips" id="statusChips"></div>
+  </header>
+
+  <div id="busyBanner" class="busy-banner" hidden></div>
+
+  <main class="layout">
+    <!-- ── Input column ─────────────────────────────────────────── -->
+    <section class="panel input-panel">
+      <h2 class="panel-title">New analysis</h2>
+
+      <div class="field">
+        <label>Load a sanitized sample</label>
+        <div class="sample-chips" id="sampleChips"></div>
+      </div>
+
+      <div class="field">
+        <label for="transcript">Paste a transcript</label>
+        <textarea id="transcript" placeholder="Paste a call or meeting transcript, or load a sample above…"></textarea>
+        <div class="sub" id="charCount"></div>
+      </div>
+
+      <div class="or-divider"><span>or</span></div>
+
+      <div class="field">
+        <label>Upload a call recording</label>
+        <label class="file-drop" id="audioDrop">
+          <input type="file" id="audioInput" accept="audio/*,.wav,.mp3,.m4a,.mp4,.aac,.ogg,.flac,.webm" hidden />
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 15V3m0 0 4 4m-4-4L8 7"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          <span id="audioDropText">Choose an audio file</span>
+        </label>
+        <div class="staged" id="stagedAudio" hidden>
+          <span class="staged-name" id="stagedName"></span>
+          <button class="staged-x" id="removeAudio" title="Remove">&times;</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="meetingDate">Meeting date <span class="muted-inline">— anchor for resolving relative dates</span></label>
+        <input type="date" id="meetingDate" />
+      </div>
+
+      <button class="primary-btn" id="analyzeBtn">
+        <span id="analyzeBtnText">Analyze call</span>
+      </button>
+      <div class="hint" id="inputHint"></div>
+    </section>
+
+    <!-- ── Output column ────────────────────────────────────────── -->
+    <section class="panel output-panel">
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-tab="results">Results</button>
+        <button class="tab" data-tab="trace">Agent trace</button>
+        <button class="tab" data-tab="transcript">Transcript</button>
+        <button class="tab" data-tab="domains">Domains</button>
+        <button class="tab" data-tab="history">History</button>
+      </div>
+
+      <div class="tab-body" id="tab-results">
+        <div class="empty" id="resultsEmpty">
+          <div class="empty-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5h16M4 12h10M4 19h7"/></svg>
+          </div>
+          <p>Run a call to see structured, source-grounded results here.</p>
+        </div>
+        <div id="resultsContent" hidden></div>
+      </div>
+
+      <div class="tab-body" id="tab-trace" hidden>
+        <div class="empty" id="traceEmpty"><p>The agent's step-by-step processing streams here — expand any step to inspect its output.</p></div>
+        <ol class="trace" id="traceList"></ol>
+      </div>
+
+      <div class="tab-body" id="tab-transcript" hidden>
+        <div class="empty" id="transcriptEmpty"><p>The numbered transcript (what every citation points at) appears here.</p></div>
+        <div class="transcript-view" id="transcriptView"></div>
+      </div>
+
+      <div class="tab-body" id="tab-domains" hidden>
+        <div class="domains-head">
+          <div>
+            <h3>Domain-context registry</h3>
+            <p class="sub">The classifier routes each call to one of these. Add your own so the agent applies the right rulebook — no code change.</p>
+          </div>
+        </div>
+        <div id="domainList" class="domain-list"></div>
+        <details class="domain-add" id="domainAdd">
+          <summary>+ Add a domain</summary>
+          <div class="domain-form">
+            <div class="field"><label>Name (agent persona)</label><input id="dfAgent" placeholder="e.g. Clinical Intake Reviewer" /></div>
+            <div class="field"><label>Short description <span class="muted-inline">— helps the router pick it</span></label><input id="dfDesc" placeholder="A clinician intake call collecting patient symptoms and history." /></div>
+            <div class="field"><label>Rulebook / context <span class="muted-inline">— what the review agent should watch for</span></label><textarea id="dfContext" placeholder="RED: PHI shared with the wrong party… YELLOW: consent to treat unclear…"></textarea></div>
+            <div class="domain-form-actions">
+              <button class="ghost-btn" id="dfCancel" type="button">Cancel</button>
+              <button class="primary-btn small" id="dfSave" type="button">Save domain</button>
+            </div>
+            <div class="hint" id="dfHint"></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="tab-body" id="tab-history" hidden>
+        <div class="history-head">
+          <span>Recent runs · stored in Supabase</span>
+          <button class="ghost-btn" id="refreshHistory">Refresh</button>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

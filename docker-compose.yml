@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    # Reads OPENAI/ASSEMBLYAI/SUPABASE keys from .env at the repo root.
+    # No key required — the app runs in deterministic MOCK mode without one.
+    env_file:
+      - .env
+    restart: unless-stopped
