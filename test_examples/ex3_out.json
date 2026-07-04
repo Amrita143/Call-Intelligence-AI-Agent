@@ -1,0 +1,106 @@
+{
+  "tag": "Duplicate subscription charge and refund escalation",
+  "domain": "customer_support",
+  "domain_agent": "Support QA Reviewer",
+  "anchor_date": "2026-07-01",
+  "summary": "The customer reported being charged twice for their subscription. The agent verified the customer's identity and confirmed the duplicate charge, stating that a refund is warranted. However, the agent noted that the billing tool has been unreliable since a recent outage and could not confirm immediate refund processing. The agent opened a priority ticket (case 55231), escalated the issue to billing, and promised a personal follow-up the next day to confirm resolution.",
+  "recommended_next_steps": [
+    "Agent to follow up with customer on 2026-07-02 to confirm refund status.",
+    "Monitor billing tool stability and ensure refund is processed."
+  ],
+  "decisions": [
+    {
+      "decision": "A refund is warranted for the duplicate charge.",
+      "source_ids": [
+        5
+      ],
+      "evidence": "5: [00:24] Agent: Thank you, that verifies you. I do see two charges on the 3rd. That's a duplicate on our end, so a refund is warranted.",
+      "citation_verified": true
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Open a priority ticket (case 55231) and escalate to billing.",
+      "owner": "Priya",
+      "start": null,
+      "due": null,
+      "source_ids": [
+        9
+      ],
+      "evidence": "9: [00:46] Agent: I hear you. I don't have authority to expedite the refund myself, so I'm opening a priority ticket — case 55231 — and escalating to billing. I'll personally follow up with you tomorrow to confirm it went through.",
+      "citation_verified": true
+    },
+    {
+      "task": "Personally follow up with the customer to confirm refund processed.",
+      "owner": "Priya",
+      "start": null,
+      "due": "2026-07-02",
+      "source_ids": [
+        9
+      ],
+      "evidence": "9: [00:46] Agent: I hear you. I don't have authority to expedite the refund myself, so I'm opening a priority ticket — case 55231 — and escalating to billing. I'll personally follow up with you tomorrow to confirm it went through.",
+      "citation_verified": true
+    }
+  ],
+  "blockers": [
+    {
+      "blocker": "Billing tool instability since outage prevents confirmation of refund processing.",
+      "source_ids": [
+        7
+      ],
+      "evidence": "7: [00:34] Agent: Normally three to five business days. I'll be honest though — our billing tool's been flaky since yesterday's outage, so I can't fully confirm it processed.",
+      "citation_verified": true
+    }
+  ],
+  "compliance_observations": [
+    {
+      "note": "Agent requested and received customer email and billing zip to verify identity before discussing account details and processing a refund. This is appropriate verification for the action.",
+      "status": "Green",
+      "source_ids": [
+        3,
+        4,
+        5
+      ],
+      "evidence": "3: [00:12] Agent: I'm sorry about that. Let me pull up your account — can you confirm the email and billing zip on file?  |  4: [00:19] Customer: jordan.k@example.com, zip 60614.  |  5: [00:24] Agent: Thank you, that verifies you. I do see two charges on the 3rd. That's a duplicate on our end, so a refund is warranted."
+    },
+    {
+      "note": "Agent disclosed that the billing tool is unreliable due to an outage and could not fully confirm the refund processed. This is a soft risk as the resolution is not fully confirmed and may require further follow-up.",
+      "status": "Yellow",
+      "source_ids": [
+        7
+      ],
+      "evidence": "7: [00:34] Agent: Normally three to five business days. I'll be honest though — our billing tool's been flaky since yesterday's outage, so I can't fully confirm it processed."
+    },
+    {
+      "note": "Agent clearly stated they lack authority to expedite the refund and is escalating the issue, which is appropriate and transparent handling of authority limits.",
+      "status": "Green",
+      "source_ids": [
+        9
+      ],
+      "evidence": "9: [00:46] Agent: I hear you. I don't have authority to expedite the refund myself, so I'm opening a priority ticket — case 55231 — and escalating to billing. I'll personally follow up with you tomorrow to confirm it went through."
+    }
+  ],
+  "items_needing_human_review": [
+    {
+      "item": "Escalation and follow-up action item details (case 55231, agent promises to follow up tomorrow)",
+      "reason": "The promised follow-up has a specific date (tomorrow), but a human should ensure the escalation and follow-up are tracked and completed as committed.",
+      "category": "Action item tracking",
+      "source_ids": [
+        9
+      ],
+      "evidence": "9: [00:46] Agent: I hear you. I don't have authority to expedite the refund myself, so I'm opening a priority ticket — case 55231 — and escalating to billing. I'll personally follow up with you tomorrow to confirm it went through."
+    },
+    {
+      "item": "Customer dissatisfaction and urgency expressed regarding the unresolved refund issue",
+      "reason": "Customer expresses dissatisfaction and urgency; a human should review for potential churn or complaint risk and ensure proper handling.",
+      "category": "Customer dissatisfaction/complaint risk",
+      "source_ids": [
+        8
+      ],
+      "evidence": "8: [00:43] Customer: That's not reassuring. I need this resolved."
+    }
+  ],
+  "segment_count": 9,
+  "domain_rationale": "The conversation is between a customer and a support agent addressing a billing issue with a duplicate charge and discussing resolution steps.",
+  "mock_mode": false
+}

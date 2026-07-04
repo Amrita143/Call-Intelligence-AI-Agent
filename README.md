@@ -130,8 +130,8 @@ Environment variables (all optional): `OPENAI_API_KEY`, `MODEL` (default `gpt-4.
 ### Deploy it (free)
 
 The app is one FastAPI service (API + UI) in a `$PORT`-aware Docker image, so it deploys to
-any free container host in a few clicks. See **[DEPLOYMENT.md](DEPLOYMENT.md)** for
-step-by-step guides (Render recommended; Hugging Face Spaces and Railway also covered).
+a free container host in a few clicks. See **[DEPLOYMENT.md](DEPLOYMENT.md)** for a
+step-by-step Railway guide.
 
 ---
 

@@ -1,0 +1,11 @@
+[00:00] Agent: Thank you for calling back, this call is recorded for quality and compliance. This is Marcus with Anderson Recovery — this is an attempt to collect a debt and any information obtained will be used for that purpose. Am I speaking with James Whitfield?
+[00:09] Consumer: Yeah, this is James.
+[00:11] Agent: Thanks. To verify, can you confirm your full name and the last four of your SSN?
+[00:16] Consumer: James Whitfield, and it's 4412.
+[00:20] Agent: Perfect. James, our records show a past-due balance of $2,340 on your Summit Card account. How can we take care of that today?
+[00:28] Consumer: I honestly can't do the full amount. I lost my job in March.
+[00:33] Agent: I understand. I may be able to offer a settlement. If you can do $1,400 today we can consider it settled in full.
+[00:41] Consumer: That's still too much right now. Could I do $700 now and $700 next month?
+[00:47] Agent: Let me note that — $700 today and $700 on the 15th of next month. I'll need a supervisor to approve the settlement split, I'll follow up by Friday.
+[00:56] Consumer: Okay. And this won't go on my credit as unpaid?
+[01:00] Agent: Once both payments post, we'll mark it settled and close the account. I'll send written confirmation.

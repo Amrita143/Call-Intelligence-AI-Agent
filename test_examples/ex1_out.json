@@ -1,0 +1,130 @@
+{
+  "tag": "Debt settlement negotiation and payment arrangement discussion.",
+  "domain": "debt_collection",
+  "domain_agent": "Collections Compliance Specialist",
+  "anchor_date": "2026-07-01",
+  "summary": "The agent properly disclosed the call recording and mini-Miranda before verifying the consumer's identity. The consumer, James Whitfield, confirmed his identity and discussed his inability to pay the full debt amount. The agent offered a settlement, and the consumer proposed a split payment arrangement. The agent agreed to note the arrangement and stated that supervisor approval is needed for the split settlement, promising to follow up by Friday. The agent confirmed that the account will be marked settled and closed once both payments are received, and written confirmation will be sent.",
+  "recommended_next_steps": [
+    "Agent to obtain supervisor approval for the split settlement arrangement.",
+    "Agent to follow up with the consumer by Friday, 2026-07-03, regarding approval.",
+    "Send written confirmation to the consumer once both payments are received."
+  ],
+  "decisions": [
+    {
+      "decision": "Account will be marked settled and closed once both $700 payments are received.",
+      "source_ids": [
+        11
+      ],
+      "evidence": "11: [01:00] Agent: Once both payments post, we'll mark it settled and close the account. I'll send written confirmation.",
+      "citation_verified": true
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Obtain supervisor approval for the split settlement arrangement ($700 now, $700 on 2026-08-15).",
+      "owner": null,
+      "start": null,
+      "due": "2026-07-03",
+      "source_ids": [
+        9
+      ],
+      "evidence": "9: [00:47] Agent: Let me note that — $700 today and $700 on the 15th of next month. I'll need a supervisor to approve the settlement split, I'll follow up by Friday.",
+      "citation_verified": true
+    },
+    {
+      "task": "Follow up with consumer regarding settlement approval by Friday.",
+      "owner": null,
+      "start": null,
+      "due": "2026-07-03",
+      "source_ids": [
+        9
+      ],
+      "evidence": "9: [00:47] Agent: Let me note that — $700 today and $700 on the 15th of next month. I'll need a supervisor to approve the settlement split, I'll follow up by Friday.",
+      "citation_verified": true
+    },
+    {
+      "task": "Send written confirmation to consumer once both payments are received.",
+      "owner": null,
+      "start": null,
+      "due": null,
+      "source_ids": [
+        11
+      ],
+      "evidence": "11: [01:00] Agent: Once both payments post, we'll mark it settled and close the account. I'll send written confirmation.",
+      "citation_verified": true
+    }
+  ],
+  "blockers": [
+    {
+      "blocker": "Supervisor approval is required for the split settlement arrangement before proceeding.",
+      "source_ids": [
+        9
+      ],
+      "evidence": "9: [00:47] Agent: Let me note that — $700 today and $700 on the 15th of next month. I'll need a supervisor to approve the settlement split, I'll follow up by Friday.",
+      "citation_verified": true
+    }
+  ],
+  "compliance_observations": [
+    {
+      "note": "Tape disclosure and mini-Miranda were provided at the start of the call, before any debt information was shared.",
+      "status": "Green",
+      "source_ids": [
+        1
+      ],
+      "evidence": "1: [00:00] Agent: Thank you for calling back, this call is recorded for quality and compliance. This is Marcus with Anderson Recovery — this is an attempt to collect a debt and any information obtained will be used for that purpose. Am I speaking with James Whitfield?"
+    },
+    {
+      "note": "Identity was verified (full name and last four of SSN) before sharing account details.",
+      "status": "Green",
+      "source_ids": [
+        3,
+        4
+      ],
+      "evidence": "3: [00:11] Agent: Thanks. To verify, can you confirm your full name and the last four of your SSN?  |  4: [00:16] Consumer: James Whitfield, and it's 4412."
+    },
+    {
+      "note": "Settlement offer of $1,400 (approx. 40% discount) is within the 50% threshold, but the agent correctly stated that supervisor approval is needed for a split settlement.",
+      "status": "Green",
+      "source_ids": [
+        7,
+        9
+      ],
+      "evidence": "7: [00:33] Agent: I understand. I may be able to offer a settlement. If you can do $1,400 today we can consider it settled in full.  |  9: [00:47] Agent: Let me note that — $700 today and $700 on the 15th of next month. I'll need a supervisor to approve the settlement split, I'll follow up by Friday."
+    },
+    {
+      "note": "No third-party disclosure or sharing of debt information with anyone other than the verified consumer.",
+      "status": "Green",
+      "source_ids": [
+        2,
+        4,
+        5
+      ],
+      "evidence": "2: [00:09] Consumer: Yeah, this is James.  |  4: [00:16] Consumer: James Whitfield, and it's 4412.  |  5: [00:20] Agent: Perfect. James, our records show a past-due balance of $2,340 on your Summit Card account. How can we take care of that today?"
+    }
+  ],
+  "items_needing_human_review": [
+    {
+      "item": "Promise-to-pay action item: $700 now and $700 on the 15th of next month, with agent follow-up by Friday.",
+      "reason": "Promise-to-pay and split settlement require tracking and supervisor approval; ensure follow-up and documentation are completed as agreed.",
+      "category": "Action item follow-up",
+      "source_ids": [
+        8,
+        9
+      ],
+      "evidence": "8: [00:41] Consumer: That's still too much right now. Could I do $700 now and $700 next month?  |  9: [00:47] Agent: Let me note that — $700 today and $700 on the 15th of next month. I'll need a supervisor to approve the settlement split, I'll follow up by Friday."
+    },
+    {
+      "item": "Consumer concern about credit reporting: 'this won't go on my credit as unpaid?'",
+      "reason": "Agent's response appears compliant, but a human should confirm that the process for updating credit reporting is accurate and that written confirmation is sent as promised.",
+      "category": "Credit reporting assurance",
+      "source_ids": [
+        10,
+        11
+      ],
+      "evidence": "10: [00:56] Consumer: Okay. And this won't go on my credit as unpaid?  |  11: [01:00] Agent: Once both payments post, we'll mark it settled and close the account. I'll send written confirmation."
+    }
+  ],
+  "segment_count": 11,
+  "domain_rationale": "The agent identifies themselves as a debt collector, states the call is an attempt to collect a debt, discusses a past-due balance, and negotiates a payment settlement with the consumer.",
+  "mock_mode": false
+}

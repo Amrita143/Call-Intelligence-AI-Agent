@@ -1,0 +1,122 @@
+{
+  "tag": "Team standup: payments webhook, search reindex, CI issues",
+  "domain": "general_meeting",
+  "domain_agent": "General Meeting Facilitator",
+  "anchor_date": "2026-07-01",
+  "summary": "The team discussed progress on the payments webhook, search reindexing, and CI reliability. Raj is finalizing the Stripe handler but is blocked by lack of staging key access. Mira will follow up with IT to resolve this. Devi has prepared the search reindex script and plans to run it in production over the weekend, pending a second reviewer as per policy. The team decided to use Postgres full-text search instead of Elasticsearch for now. Mira highlighted ongoing issues with flaky CI that are impacting productivity.",
+  "recommended_next_steps": [
+    "Ensure Raj receives staging key access promptly.",
+    "Assign a second reviewer for Devi's production reindex.",
+    "Investigate and address CI flakiness."
+  ],
+  "decisions": [
+    {
+      "decision": "Use Postgres full-text search for now instead of Elasticsearch.",
+      "source_ids": [
+        5
+      ],
+      "evidence": "5: [00:25] Mira: We'll go with Postgres full-text for now instead of Elasticsearch, the extra infra isn't worth it yet.",
+      "citation_verified": true
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Complete Stripe payments webhook handler.",
+      "owner": "Raj",
+      "start": null,
+      "due": "2026-07-01",
+      "source_ids": [
+        2
+      ],
+      "evidence": "2: [00:04] Raj: I'll have the Stripe handler done by this week Wednesday, just testing left. I'm blocked on staging keys though, no access yet.",
+      "citation_verified": true
+    },
+    {
+      "task": "Chase IT for Raj's staging key access.",
+      "owner": "Mira",
+      "start": "2026-07-01",
+      "due": null,
+      "source_ids": [
+        3
+      ],
+      "evidence": "3: [00:12] Mira: I'll chase IT for your access today. Devi, the search reindex?",
+      "citation_verified": true
+    },
+    {
+      "task": "Run search reindex script in production, pending second reviewer.",
+      "owner": "Devi",
+      "start": null,
+      "due": "2026-07-05",
+      "source_ids": [
+        4
+      ],
+      "evidence": "4: [00:17] Devi: Script's ready. I'll run it in prod this weekend, but our rule is prod changes need a second reviewer — not sure who's free.",
+      "citation_verified": true
+    },
+    {
+      "task": "Ship the reindex by end of next week if reviewer is found.",
+      "owner": "Devi",
+      "start": null,
+      "due": "2026-07-10",
+      "source_ids": [
+        6
+      ],
+      "evidence": "6: [00:31] Devi: Agreed. I'll aim to ship the reindex by end of next week if I get a reviewer.",
+      "citation_verified": true
+    },
+    {
+      "task": "Investigate flaky CI issues.",
+      "owner": null,
+      "start": null,
+      "due": null,
+      "source_ids": [
+        7
+      ],
+      "evidence": "7: [00:36] Mira: Last thing — the flaky CI. Someone should look at it soon, it's slowing everyone down.",
+      "citation_verified": true
+    }
+  ],
+  "blockers": [
+    {
+      "blocker": "Raj is blocked on staging key access for Stripe handler.",
+      "source_ids": [
+        2
+      ],
+      "evidence": "2: [00:04] Raj: I'll have the Stripe handler done by this week Wednesday, just testing left. I'm blocked on staging keys though, no access yet.",
+      "citation_verified": true
+    },
+    {
+      "blocker": "Devi needs a second reviewer to run the reindex script in production.",
+      "source_ids": [
+        4
+      ],
+      "evidence": "4: [00:17] Devi: Script's ready. I'll run it in prod this weekend, but our rule is prod changes need a second reviewer — not sure who's free.",
+      "citation_verified": true
+    }
+  ],
+  "compliance_observations": [
+    {
+      "note": "Devi correctly notes that production changes require a second reviewer, demonstrating adherence to change management best practices.",
+      "status": "Green",
+      "source_ids": [
+        4
+      ],
+      "evidence": "4: [00:17] Devi: Script's ready. I'll run it in prod this weekend, but our rule is prod changes need a second reviewer — not sure who's free."
+    }
+  ],
+  "items_needing_human_review": [
+    {
+      "item": "Devi is unsure who will review the production reindex script, and the reviewer is not assigned.",
+      "reason": "A human should ensure a qualified reviewer is assigned before the production change proceeds, to comply with change management rules.",
+      "category": "Unassigned action item / Change management",
+      "source_ids": [
+        4,
+        6
+      ],
+      "evidence": "4: [00:17] Devi: Script's ready. I'll run it in prod this weekend, but our rule is prod changes need a second reviewer — not sure who's free.  |  6: [00:31] Devi: Agreed. I'll aim to ship the reindex by end of next week if I get a reviewer."
+    }
+  ],
+  "segment_count": 7,
+  "domain_rationale": "This is an internal team standup discussing project tasks and technical blockers, not fitting any of the specific customer-facing or transactional domains.",
+  "mock_mode": false
+}

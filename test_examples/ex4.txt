@@ -1,0 +1,7 @@
+[00:00] Mira: Quick standup. Raj, where's the payments webhook?
+[00:04] Raj: I'll have the Stripe handler done by this week Wednesday, just testing left. I'm blocked on staging keys though, no access yet.
+[00:12] Mira: I'll chase IT for your access today. Devi, the search reindex?
+[00:17] Devi: Script's ready. I'll run it in prod this weekend, but our rule is prod changes need a second reviewer — not sure who's free.
+[00:25] Mira: We'll go with Postgres full-text for now instead of Elasticsearch, the extra infra isn't worth it yet.
+[00:31] Devi: Agreed. I'll aim to ship the reindex by end of next week if I get a reviewer.
+[00:36] Mira: Last thing — the flaky CI. Someone should look at it soon, it's slowing everyone down.

@@ -1,0 +1,9 @@
+[00:00] Agent: Thanks for calling TechCare support, this is Priya, is it alright if I record this call for quality?
+[00:06] Customer: Sure. I've been charged twice for my subscription this month and I want it fixed.
+[00:12] Agent: I'm sorry about that. Let me pull up your account — can you confirm the email and billing zip on file?
+[00:19] Customer: jordan.k@example.com, zip 60614.
+[00:24] Agent: Thank you, that verifies you. I do see two charges on the 3rd. That's a duplicate on our end, so a refund is warranted.
+[00:32] Customer: Good. How fast?
+[00:34] Agent: Normally three to five business days. I'll be honest though — our billing tool's been flaky since yesterday's outage, so I can't fully confirm it processed.
+[00:43] Customer: That's not reassuring. I need this resolved.
+[00:46] Agent: I hear you. I don't have authority to expedite the refund myself, so I'm opening a priority ticket — case 55231 — and escalating to billing. I'll personally follow up with you tomorrow to confirm it went through.

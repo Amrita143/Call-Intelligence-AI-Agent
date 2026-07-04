@@ -1,0 +1,158 @@
+{
+  "tag": "Pro plan pricing and next steps for 30-seat upgrade",
+  "domain": "sales",
+  "domain_agent": "Sales Deal-Desk Reviewer",
+  "anchor_date": "2026-07-01",
+  "summary": "The customer confirmed that analytics are driving their interest in upgrading to the Pro plan for 30 seats. The rep offered a discounted annual rate of $32 per seat, contingent on procurement and legal approvals. The rep will send the proposal and data processing agreement (DPA) and involve their security team for review. Procurement approval and legal review on the customer side are required before proceeding. Both parties agreed to regroup early next week, aiming to finalize everything by the end of July.",
+  "recommended_next_steps": [
+    "Customer to identify procurement contact and initiate approval process.",
+    "Rep to send proposal and DPA, and involve security team for review.",
+    "Schedule follow-up meeting for early next week."
+  ],
+  "decisions": [
+    {
+      "decision": "Proceed with Pro plan at $32 per seat annually, pending procurement and legal approvals.",
+      "source_ids": [
+        3,
+        5
+      ],
+      "evidence": "3: [00:15] Rep: Got it. For 30 seats I'd put you on Pro. List is $40 a seat, but I can do $32 if we sign an annual term.  |  5: [00:31] Rep: Understood. Let's plan on Pro at the annual rate, pending those approvals. I'll send the proposal and the DPA today and loop in our security team for the review.",
+      "citation_verified": true
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Send proposal and DPA to customer and loop in security team for review.",
+      "owner": null,
+      "start": null,
+      "due": "2026-07-01",
+      "source_ids": [
+        5
+      ],
+      "evidence": "5: [00:31] Rep: Understood. Let's plan on Pro at the annual rate, pending those approvals. I'll send the proposal and the DPA today and loop in our security team for the review.",
+      "citation_verified": true
+    },
+    {
+      "task": "Customer to identify who will handle procurement approval on their side.",
+      "owner": null,
+      "start": null,
+      "due": null,
+      "source_ids": [
+        8
+      ],
+      "evidence": "8: [00:47] Dana: I'll find out who. Let's regroup early next week.",
+      "citation_verified": true
+    },
+    {
+      "task": "Set up follow-up meeting for early next week.",
+      "owner": null,
+      "start": null,
+      "due": "2026-07-06",
+      "source_ids": [
+        8,
+        9
+      ],
+      "evidence": "8: [00:47] Dana: I'll find out who. Let's regroup early next week.  |  9: [00:50] Rep: Perfect, I'll set up the follow-up and aim to have everything wrapped by end of the month.",
+      "citation_verified": true
+    }
+  ],
+  "blockers": [
+    {
+      "blocker": "Procurement approval required on customer side for deals over $25k/year.",
+      "source_ids": [
+        4,
+        8
+      ],
+      "evidence": "4: [00:23] Dana: Pricing's the sticking point. Anything over $25k a year has to clear procurement, and legal needs to review the data terms.  |  8: [00:47] Dana: I'll find out who. Let's regroup early next week.",
+      "citation_verified": true
+    },
+    {
+      "blocker": "Legal review of data terms required on customer side.",
+      "source_ids": [
+        4
+      ],
+      "evidence": "4: [00:23] Dana: Pricing's the sticking point. Anything over $25k a year has to clear procurement, and legal needs to review the data terms.",
+      "citation_verified": true
+    }
+  ],
+  "compliance_observations": [
+    {
+      "note": "Rep clearly stated list price ($40/seat) and quoted price ($32/seat) for Pro plan, with contract term (annual) and condition (if we sign annual term). This is a required step for pricing clarity.",
+      "status": "Green",
+      "source_ids": [
+        3
+      ],
+      "evidence": "3: [00:15] Rep: Got it. For 30 seats I'd put you on Pro. List is $40 a seat, but I can do $32 if we sign an annual term."
+    },
+    {
+      "note": "Rep did not make any pricing or discount commitments beyond their authority, nor did they guarantee unshipped features or make unsubstantiated claims about competitors or customers.",
+      "status": "Green",
+      "source_ids": [
+        3,
+        5
+      ],
+      "evidence": "3: [00:15] Rep: Got it. For 30 seats I'd put you on Pro. List is $40 a seat, but I can do $32 if we sign an annual term.  |  5: [00:31] Rep: Understood. Let's plan on Pro at the annual rate, pending those approvals. I'll send the proposal and the DPA today and loop in our security team for the review."
+    },
+    {
+      "note": "Rep stated they would send the proposal and DPA and loop in security for review, which is a required action item capture.",
+      "status": "Green",
+      "source_ids": [
+        5
+      ],
+      "evidence": "5: [00:31] Rep: Understood. Let's plan on Pro at the annual rate, pending those approvals. I'll send the proposal and the DPA today and loop in our security team for the review."
+    },
+    {
+      "note": "The deal appears single-threaded so far (only Dana engaged, no explicit mention of economic buyer or other stakeholders). This is a soft risk and should be flagged for coaching.",
+      "status": "Yellow",
+      "source_ids": [
+        2,
+        4,
+        8
+      ],
+      "evidence": "2: [00:08] Dana: They did. The analytics are the main reason we'd move forward. We've got about 30 people who'd need seats now.  |  4: [00:23] Dana: Pricing's the sticking point. Anything over $25k a year has to clear procurement, and legal needs to review the data terms.  |  8: [00:47] Dana: I'll find out who. Let's regroup early next week."
+    },
+    {
+      "note": "The next step (regroup early next week) is agreed upon, but the exact date is not specified. This is a soft risk and should be flagged for coaching.",
+      "status": "Yellow",
+      "source_ids": [
+        8,
+        9
+      ],
+      "evidence": "8: [00:47] Dana: I'll find out who. Let's regroup early next week.  |  9: [00:50] Rep: Perfect, I'll set up the follow-up and aim to have everything wrapped by end of the month."
+    }
+  ],
+  "items_needing_human_review": [
+    {
+      "item": "Action item: Dana to find out who owns procurement on their side.",
+      "reason": "Owner is Dana, but no deadline is specified and the responsible person is not yet identified. Human should confirm follow-up.",
+      "category": "Unclear action item ownership/details",
+      "source_ids": [
+        8
+      ],
+      "evidence": "8: [00:47] Dana: I'll find out who. Let's regroup early next week."
+    },
+    {
+      "item": "Action item: Rep to set up follow-up meeting 'early next week'.",
+      "reason": "The timing is vague; a specific date should be set for accountability.",
+      "category": "Vague action item deadline",
+      "source_ids": [
+        8,
+        9
+      ],
+      "evidence": "8: [00:47] Dana: I'll find out who. Let's regroup early next week.  |  9: [00:50] Rep: Perfect, I'll set up the follow-up and aim to have everything wrapped by end of the month."
+    },
+    {
+      "item": "Blockers: Procurement and legal review required on customer side.",
+      "reason": "These are standard blockers but should be tracked and confirmed as resolved in future steps.",
+      "category": "Blocker tracking",
+      "source_ids": [
+        4,
+        5
+      ],
+      "evidence": "4: [00:23] Dana: Pricing's the sticking point. Anything over $25k a year has to clear procurement, and legal needs to review the data terms.  |  5: [00:31] Rep: Understood. Let's plan on Pro at the annual rate, pending those approvals. I'll send the proposal and the DPA today and loop in our security team for the review."
+    }
+  ],
+  "segment_count": 9,
+  "domain_rationale": "This conversation is a sales negotiation between a sales representative and a prospective customer discussing product features, pricing, seat count, and procurement steps to close a deal.",
+  "mock_mode": false
+}

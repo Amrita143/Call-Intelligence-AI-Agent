@@ -1,0 +1,9 @@
+[00:00] Rep: Thanks for hopping on, Dana. Last time your team was hitting limits on the Starter plan — did the dashboards help since the trial?
+[00:08] Dana: They did. The analytics are the main reason we'd move forward. We've got about 30 people who'd need seats now.
+[00:15] Rep: Got it. For 30 seats I'd put you on Pro. List is $40 a seat, but I can do $32 if we sign an annual term.
+[00:23] Dana: Pricing's the sticking point. Anything over $25k a year has to clear procurement, and legal needs to review the data terms.
+[00:31] Rep: Understood. Let's plan on Pro at the annual rate, pending those approvals. I'll send the proposal and the DPA today and loop in our security team for the review.
+[00:40] Dana: Who's chasing procurement on your side?
+[00:42] Rep: That'd be on your side actually — can someone there own it, otherwise it'll stall?
+[00:47] Dana: I'll find out who. Let's regroup early next week.
+[00:50] Rep: Perfect, I'll set up the follow-up and aim to have everything wrapped by end of the month.
